@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CalculatorV2" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/cool_blue</item>
+        <item name="colorPrimaryVariant">@color/cool_blue</item>
+        <item name="colorOnPrimary">@color/cool_blue</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/cool_blue</item>
+        <item name="colorSecondaryVariant">@color/cool_blue</item>
+        <item name="colorOnSecondary">@color/cool_blue</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
