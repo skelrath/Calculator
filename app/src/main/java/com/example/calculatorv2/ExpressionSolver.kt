@@ -1,3 +1,6 @@
+package com.example.calculatorv2
+
+
 class ExpressionSolver {
 
     companion object {
@@ -11,6 +14,13 @@ class ExpressionSolver {
             еще одно число, либо же добавить новую ячейку в лист */
 
             for (i in expression) {
+
+                if (i == '.') {
+
+                    numberStrings[numberStrings.lastIndex] += "."
+                    continue
+
+                }
 
                 if (i.isDigit()) {
 
@@ -33,15 +43,21 @@ class ExpressionSolver {
                 canAddNumberToNumberInList =
                     false //меняем на false так как теперь нам нужно проиницилизировать следующее число
 
-                if (i.toString() == "%") { //если i процен, то просто умножаем последнюю ячейку в листе числе на 0.01
+                when {
 
-                    numberStrings[numberStrings.lastIndex] =
-                        (numberStrings[numberIndex].toInt() * 0.01).toString()
+                    i.toString() == "%" -> { //если i процент, то просто умножаем последнюю ячейку в листе числе на 0.01
+
+                        numberStrings[numberStrings.lastIndex] =
+                            (numberStrings[numberIndex].toInt() * 0.01).toString()
 
 
-                } else {
+                    }
 
-                    characters.add(i.toString()) //просто добавляем знак
+                    else -> {
+
+                        characters.add(i.toString()) //просто добавляем знак
+
+                    }
 
                 }
 
@@ -51,14 +67,13 @@ class ExpressionSolver {
             val numbers: MutableList<Double> =
                 numberStrings.map { it.toDouble() } as MutableList<Double> //переводим список стринговых чисел в обычные числа
 
-            var characterIndex = 0 //навигация по листу чаров
             var character: String
-            var total: Double = numbers[0] as Double
+            var total: Double = numbers[0]
 
             numbers.removeAt(0)
 
 
-            for (number in numbers) { //проходимся по листу чисел
+            for ((characterIndex, number) in numbers.withIndex()) { //проходимся по листу чисел
                 character = characters[characterIndex]
 
                 when (character) {
@@ -69,8 +84,6 @@ class ExpressionSolver {
                         total /= number
                     }
                 }
-
-                characterIndex++
 
             }
 

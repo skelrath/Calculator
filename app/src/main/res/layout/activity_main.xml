@@ -13,7 +13,7 @@
         android:id="@+id/calculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
@@ -24,6 +24,7 @@
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -38,14 +39,16 @@
         app:layout_constraintTop_toBottomOf="@+id/calculator"
         app:srcCompat="@drawable/gradient" />
 
+
+
     <TextView
         android:id="@+id/designTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/numbers"
-        android:text="8888888888"
+        android:text="@string/_8888888888"
         android:textColor="#2C373A37"
-        android:textSize="40dp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.456"
@@ -78,8 +81,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="allClearAction"
-        android:text="AC"
+        android:text="@string/ac"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -98,28 +100,26 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="plusMinusAction"
-        android:text="+/-"
+        android:text="@string/plus_minus"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
         android:topRightRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/eight"
-        app:layout_constraintEnd_toStartOf="@+id/procent"
+        app:layout_constraintEnd_toStartOf="@+id/percent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/AC"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/procent"
+        android:id="@+id/percent"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:backgroundTint="#F1F3F6"
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="operationAction"
-        android:text="%"
+        android:text="@string/percent"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -127,9 +127,9 @@
         app:layout_constraintBottom_toTopOf="@+id/nine"
         app:layout_constraintEnd_toStartOf="@+id/divison"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toEndOf="@+id/plus_minus"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
 
     <Button
         android:id="@+id/divison"
@@ -139,8 +139,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="operationAction"
-        android:text="/"
+        android:text="@string/divide"
         android:textColor="@color/white_greater"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -148,9 +147,8 @@
         app:layout_constraintBottom_toTopOf="@+id/multiplication"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/procent"
+        app:layout_constraintStart_toEndOf="@+id/percent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
 
     <Button
         android:id="@+id/seven"
@@ -160,8 +158,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="numberAction"
-        android:text="7"
+        android:text="@string/_7"
         android:textColor="@color/cool_blue"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -181,8 +178,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="numberAction"
-        android:text="8"
+        android:text="@string/_8"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -201,8 +197,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="numberAction"
-        android:text="9"
+        android:text="@string/_9"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -211,7 +206,7 @@
         app:layout_constraintEnd_toStartOf="@+id/multiplication"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/eight"
-        app:layout_constraintTop_toBottomOf="@+id/procent" />
+        app:layout_constraintTop_toBottomOf="@+id/percent" />
 
     <Button
         android:id="@+id/multiplication"
@@ -221,8 +216,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="operationAction"
-        android:text="*"
+        android:text="@string/multiply"
         android:textColor="#F1F3F6"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -241,8 +235,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="numberAction"
-        android:text="5"
+        android:text="@string/_5"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -261,8 +254,8 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="numberAction"
-        android:text="4"
+
+        android:text="@string/_4"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -281,8 +274,8 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="numberAction"
-        android:text="6"
+
+        android:text="@string/_6"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -301,8 +294,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="operationAction"
-        android:text="-"
+        android:text="@string/minus"
         android:textColor="#F1F3F6"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -321,8 +313,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="operationAction"
-        android:text="+"
+        android:text="@string/plus"
         android:textColor="#F1F3F6"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -341,8 +332,8 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="numberAction"
-        android:text="3"
+
+        android:text="@string/_3"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -361,8 +352,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="numberAction"
-        android:text="2"
+        android:text="@string/_2"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -381,8 +371,7 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="numberAction"
-        android:text="1"
+        android:text="@string/_1"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
@@ -393,23 +382,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/four" />
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/operators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="percent,divison,multiplication,minus,plus,comma,plus_minus" />
+
     <Button
         android:id="@+id/zero"
-        android:layout_width="172dp"
+        android:layout_width="178dp"
         android:layout_height="80dp"
+        android:layout_marginStart="16dp"
         android:backgroundTint="#F1F3F6"
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="numberAction"
-        android:text="0"
+        android:text="@string/_0"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
         android:topRightRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/comma"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/one" />
 
@@ -421,15 +414,13 @@
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="operationAction"
-        android:text="."
+        android:text="@string/dot"
         android:textColor="#3A4E89"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
         android:topRightRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/equal"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/zero"
         app:layout_constraintTop_toBottomOf="@+id/three" />
 
@@ -437,20 +428,24 @@
         android:id="@+id/equal"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#3A4E89"
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:onClick="equalAction"
-        android:text="="
+        android:text="@string/equal"
         android:textColor="#F1F3F6"
         android:textSize="29sp"
         android:topLeftRadius="20dp"
         android:topRightRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/comma"
         app:layout_constraintTop_toBottomOf="@+id/plus" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="group,seven,eight,nine,five,four,six,three,two,one,zero" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
